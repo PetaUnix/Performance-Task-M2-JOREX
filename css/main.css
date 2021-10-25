@@ -89,7 +89,7 @@
     
     .text-box span {
         font-family: Bigilla;
-        font-size: 50px;
+        font-size: 90px;
     }
     
     .text-box p {
@@ -99,7 +99,7 @@
     }
     
     .text-box h4 {
-        padding-left: 80px;
+        padding-left: 81px;
     }
     
     svg {
@@ -341,4 +341,8 @@
     
     .img:nth-child(3+n) {
         background: url(../img/me3.jpg);
+    }
+    
+    #logo {
+        font-family: Roulette;
     }
