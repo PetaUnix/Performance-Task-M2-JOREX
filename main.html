@@ -11,16 +11,20 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+    <!-- Animation on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
     <section class="header">
         <nav>
-            <h1 id="header-logo">JOREX</h1>
+            <img src="logo.jpg">
             <div class="nav-links" id="navLinks">
-                <i class="fas fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#Products">PRODUCTS</a></li>
@@ -28,7 +32,6 @@
                     <li><a href="#about">ABOUT</a></li>
                 </ul>
             </div>
-            <i class="fas fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
@@ -36,10 +39,23 @@
             <h4>Lorem Ipsum sit dolor amet.</h4><br><br>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quos rem sequi vel, nes</p>
         </div>
-        <div id="blob">
-            <div id="image"></div>
+        <div class="circletext">
+            <svg viewBox="0 0 100 100" width="300" height="500">
+            <defs>
+              <path id="circle"
+                d="
+                  M 50, 50
+                  m -37, 0
+                  a 37,37 0 1,1 74,0
+                  a 37,37 0 1,1 -74,0"/>
+            </defs>
+            <text font-size="17">
+              <textPath xlink:href="#circle" class=rtext>
+                You spin me right round, baby...
+              </textPath>
+            </text>
+            </svg>
         </div>
-        <button id="btn">Create Blob!</button>
     </section>
 
     <section id="Products" class="course">
@@ -47,56 +63,63 @@
         <p>Most Useful Products that you can buy!!</p>
         <div class="row">
             <div class="course-col">
-                <h3>Lorem</h3>
-                <p>Lorem Ipsum</p>
+                <h3>T Shirts</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio, neque sed nulla reprehenderit iste numquam officiis accusantium assumenda vero!</p>
             </div>
             <div class="course-col">
-                <h3>Lorem</h3>
-                <p>Lorem Ipsum</p>
+                <h3>Shorts</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa in nostrum ad nobis? Eos qui id deserunt repellendus modi. Commodi.</p>
             </div>
             <div class="course-col">
-                <h3>Lorem</h3>
-                <p>Lorem Ipsum</p>
+                <h3>Shoes</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci excepturi quos libero similique voluptates eos ex natus sed repudiandae perspiciatis!</p>
             </div>
         </div>
-        <a href="index.php">Check for more in Shopping Cart!!</a>
+        <a id="button-shop" href="index.php">Check for more in Shopping Cart!!</a><br><br><br>
     </section>
     <br>
 
     <section id="about" class="intro-2">
         <div class="smooth-scroll-wrapper">
             <div class="content">
-                <h1 id="header1">Rex Bautista Tumbagahan</h1>
-                <div class="img"></div>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
-                <h1 id="header1">Ranny I Castillo Jr</h1>
-                <div class="img"></div>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
-                <h1 id="header1">Jomer Fernando</h1>
-                <div class="img"></div>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
+                <div data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
+                    <h1 id="header1">Rex Bautista Tumbagahan</h1>
+                    <div class="img"></div>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
+                </div>
+                <div data-aos="fade-left">
+                    <h1 id="header1">Ranny I Castillo Jr (Sales Manager)</h1>
+                    <div class="img"></div>
+                    <p id="para-1">As a Sales Manager, I want to make it be responsive, Creative Thinker as by planning and analyzing data, assigning sales territories and building my team.</p>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
+                </div>
+                <div class="box3">
+                    <h1 id="header1">Jomer Fernando</h1>
+                    <div class="img"></div>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
+                </div>
                 <h1 id="header1">Jonnah Fernando</h1>
                 <div class="img"></div>
                 <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
                 <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
-                <h1 id="header1">Lurkie Amacio Jr</h1>
-                <div class="img"></div>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
-                <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
+                <div class="box4">
+                    <h1 id="header1">Lurkie Amacio Jr</h1>
+                    <div class="img"></div>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
+                </div>
+                <div class="box5">
+                    <h1 id="header1">Rhino Casidsid</h1>
+                    <div class="img"></div>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam facilis quae aliquam placeat fugit modi quaerat aut libero non aliquid fuga reprehenderit vel commodi, cupiditate officia atque praesentium sapiente possimus.</p>
+                    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum, ullam reprehenderit fuga omnis doloremque dolore quasi nulla. Porro aspernatur soluta suscipit optio praesentium dolor quos, et blanditiis quaerat ullam.</p>
+                </div>
+
             </div>
         </div>
     </section>
-
-    <section class="footer">
-        <div class="outro">
-            <h5>Follow Us on facebook</h5>
-            <i class="fab fa-facebook"></i>
-        </div>
-    </section>
-
     <script>
         const body = document.body,
             scrollWrap = documnt.getElementsByClassName("smmoth-scroll-wrapper")[0],
@@ -114,6 +137,13 @@
 
         smoothScroll();
     </script>
+
+    <!-- Animation on Scroll Js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 </body>
 
 </html>
